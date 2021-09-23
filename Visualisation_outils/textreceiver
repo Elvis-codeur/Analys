@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 16 13:11:34 2020
+
+@author: elvis
+"""
+
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
+import sys
+from Visualisation_outils.buttons import *
+
+class TextReceiver(QWidget):
+    finish = pyqtSignal()
+    def __init__(self):
+        super().__init__()
+        self.text_receiver = QLineEdit()
+        self.font_receiver = FontButton()
+        self.color_receiver = ColorButton()
+        self.button_finish = QPushButton("Terminer")
+        self.layout_principale = QVBoxLayout()
+        
+        self.init_UI()
+        self.button_finish.clicked.connect(self.finish)
+
+    def get_data(self):
+        
+        return self.font_receiver.font_(),self.color_receiver.color_(),self.font_receiver.font_size_()
+        
+    def init_UI(self):
+        text_receiver_layout = QFormLayout()
+        text_receiver_layout.addRow("Texte",self.text_receiver)
+        
+        font_and_color_layout = QHBoxLayout()
+        
+        font_receiver_layout = QFormLayout()
+        font_receiver_layout.addRow("POlice",self.font_receiver)
+        
+        color_receiver_layout = QFormLayout()
+        color_receiver_layout.addRow("Couleur",self.color_receiver)
+        
+        font_and_color_layout.addLayout(color_receiver_layout)
+        font_and_color_layout.addLayout(font_receiver_layout)
+        
+        self.layout_principale.addLayout(text_receiver_layout)
+        self.layout_principale.addLayout(font_and_color_layout)
+        self.layout_principale.addWidget(self.button_finish)
+        
+        self.setLayout(self.layout_principale)
+        
+        
+        
+class FinalTextReceiver(QWidget):
+    send_info = pyqtSignal(list)
+    def __init__(self):
+        super().__init__()
+        self.text_widget = TextReceiver()
+        self.annoation_widget = TextReceiver()
+        
+        self.tab_widget = QTabWidget()
+        
+        self.init_UI()
+        self.text_widget.finish.connect(self.send_data_t)
+        self.annoation_widget.finish.connect(self.send_data_a)
+        
+    def send_data_t(self):
+        self.send_info.emit([1,list(self.text_widget.get_data())])
+        
+    def send_data_a(self):
+        self.send_info.emit([2,list(self.annoation_widget.get_data())])
+        
+        
+    def init_UI(self):     
+        self.layout_principale = QVBoxLayout()
+        self.tab_widget.addTab(self.text_widget,"Texte")
+        self.tab_widget.addTab(self.annoation_widget,"Annotation")
+        
+        self.layout_principale.addWidget(self.tab_widget)
+        
+        self.setLayout(self.layout_principale)
+        
+            
+            
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    w = FinalTextReceiver()
+    w.show()
+    sys.exit(app.exec())
+        
+        
+        

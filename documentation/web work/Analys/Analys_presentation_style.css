@@ -1,0 +1,48 @@
+.icone_debut
+{
+    width: auto;
+    margin-left: 20%;}
+
+.icone_pri_fig
+{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 40%;
+}
+.plot_1
+{
+    margin-right: 50%;
+}
+.imp
+{
+    background-color: blue;
+    color: white;
+    border-radius: 2px;
+
+}
+.lien1
+{
+    color: rgb(65, 219, 51);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 25%;
+    font-weight: bold;
+    text-decoration: blue;
+    font-size: 1.5em;
+}
+.presentation
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+}
+.analys
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+}

@@ -1,0 +1,5 @@
+operation(Tab_F[i+1] = 3*Tab_F[i],1,10)
+
+operation(Tab_F[i] = Tab_C[i-1]+Tab_F[i],2,10)
+
+operation(Tab_H[i+1] = Tab_H[i]+Tab_H[i-1],2,10)

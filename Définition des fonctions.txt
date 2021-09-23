@@ -1,0 +1,169 @@
+=== 1 ===
+remove(Colonne)
+
+=========
+
+=== 2 ===
+sort(Colonne,sens,type,début,fin)
+sort(Colonne,sens,type,début)
+sort(Colonne,sens,type)
+
+sort(Tab_C,mM,float,14,521)
+
+=========
+
+=== 3 ===
+delete(Colonne,début)
+delete(Colonne,début,fin)
+
+delete(All,début)
+delete(All,début,fin)
+
+=========
+
+=== 4 ===
+mean(Colonne)
+mean(Colonne,Colonne)
+mean(Colonne,Colonne,début)
+mean(Colonne,début,fin)
+mean(Colonne,Colonne,début,fin)
+
+=========
+
+=== 5 ===
+variance(Colonne)
+variance(Colonne,Colonne)
+variance(Colonne,Colonne,début)
+variance(Colonne,début,fin)
+variance(Colonne,Colonne,début,fin)
+
+=========
+
+=== 6 ===
+ecart_type(Colonne)
+ecart_type(Colonne,Colonne)
+ecart_type(Colonne,Colonne,début)
+ecart_type(Colonne,début,fin)
+ecart_type(Colonne,Colonne,début,fin)
+
+=========
+
+=== 7 ===
+min(Colonne,type)
+min(Colonne,type,début)
+min(Colonne,type,début,fin)
+
+=========
+
+=== 8 ===
+max(Colonne,type)
+max(Colonne,type,début)
+max(Colonne,type,début,fin)
+
+=========
+
+=== 9 ===
+count([élement à prendre dans chaque colonne];[Colonnes])
+count([clément,12,Alpha];[Tab_A,Tab_Z,Tab_G])
+
+=========
+
+=== 10 ===
+to_freq(Colonne)
+to_freq(Colonne,début)
+to_freq(Colonne,début,fin)
+=========
+
+=== 11 ===
+to_percent(Colonne)
+to_percent(Colonne,début)
+to_percent(Colonne,début,fin)
+=========
+
+
+=== 12 ===
+sum(Colonne)
+sum(Colonne,début)
+sum(Colonne,début,fin)
+
+=========
+
+=== 13 ===
+produce(Colonne)
+produce(Colonne,début)
+produce(Colonne,début,fin)
+
+=========
+
+=== 14 ===
+add(Colonne,élément à ajouter,type)
+add(Colonne,élément à ajouter,type,début)
+add(Colonne,élément à ajouter,type,début,fin)
+add(Tab_A,14,str,float)
+
+=========
+
+=== 15 ===
+sub(Colonne,élément à ajouter,type)
+sub(Colonne,élément à ajouter,type,début)
+sub(Colonne,élément à ajouter,type,début,fin)
+sub(Tab_A,14,str,float)
+
+=========
+
+=== 16 ===
+mul(Colonne,élément à ajouter,type)
+mul(Colonne,élément à ajouter,type,début)
+mul(Colonne,élément à ajouter,type,début,fin)
+mul(Tab_A,14,str,float)
+
+=========
+
+=== 17 ===
+div(Colonne,diviseur,float)
+div(Colonne,diviseur,float,début)
+div(Colonne,diviseur,float,début,fin)
+div(Tab_A,14,float,float)
+
+=========
+=== 18 ===
+operation(Calcul à faire)
+operation(Tab_O[i]*Tab[i-1]+1,10,50)
+
+=========
+=== 19 ===
+subtitute(Colonne,élément à remplacer,élément à mettre)
+subtitute(Colonne,élément à remplacer,élément à mettre,début)
+subtitute(Colonne,élément à remplacer,élément à mettre,début,fin)
+==========
+
+=== 20 ===
+fill(Colonne,expression,début,fin)
+==========
+
+=== 21 ===
+lower(Colonne)
+lower(Colonne,début,fin)
+lower(Colonne,début,fin,limite des caractère à changer)
+==========
+
+=== 22 ===
+upper(Colonne)
+upper(Colonne,début,fin)
+upper(Colonne,début,fin,limite des caractère à changer)
+==========
+
+
+=== 23 ===
+alloc(Colonne;indice;valeur)
+alloc(colonne;indice;fonction)
+==========
+
+
+=== 23 ===
+translate(Colonne de début,Colonne de fin,début,fin,langue cible)
+translate(Colonne de début,Colonne de fin, ligne à modifier,langue cible)
+translate(Colonne,début,fin,langue cible)
+translate(Colonne, ligne à modifier,langue cible)
+==========
+

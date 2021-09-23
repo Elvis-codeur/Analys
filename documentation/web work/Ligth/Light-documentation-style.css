@@ -1,0 +1,24 @@
+.menu_name
+{
+    font-size: 1.5em;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sous_menu
+{
+    font-size: 1.4em;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.sur
+{
+    font-size: 1.2em;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.ody
+{
+    font-size: 1.3em;
+}

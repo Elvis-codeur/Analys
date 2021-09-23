@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Nov 15 16:01:45 2020
+
+@author: elvis
+"""
+
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
+from Visualisation_outils.buttons  import *
+import sys
+
+class TextReceiver(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.text = ""
+        self.text_receiver = QLineEdit()
+        self.color_receiver = ColorButton()
+        self.font_receiver = FontButton()
+        self.finish_button = QPushButton("Terminer")
+        
+        self.init_UI()
+        
+    def get_data(self):
+        ret
+        
+        
+    def init_UI(self):
+        self.layout_principale = QVBoxLayout()
+        
+        color_and_font_layout = QHBoxLayout()
+        
+        color_receiver_layout = QFormLayout()
+        color_receiver_layout.addRow("Couleur",self.color_receiver)
+        
+        font_receiver_layout = QFormLayout()
+        font_receiver_layout.addRow("Police",self.font_receiver)
+        
+        
+        color_and_font_layout.addLayout(color_receiver_layout)
+        color_and_font_layout.addLayout(font_receiver_layout)
+        
+        text_receiver_layout = QFormLayout()
+        text_receiver_layout.addRow("Texte",self.text_receiver)
+        
+        self.layout_principale.addLayout(text_receiver_layout)
+        self.layout_principale.addLayout(color_and_font_layout)
+        self.layout_principale.addWidget(self.finish_button)
+        
+        self.setLayout(self.layout_principale)
+        
+        
+        
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    w = TextReceiver()
+    w.show()
+    sys.exit(app.exec())
+        

@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset = "utf-8"/>
+			<title> Documentation d'Analys </title>
+			<link rel = "stylesheet" href = "style.css">
+		</head>
+		<body>
+		<p> Le logiciel <strong class = "analys" >Analys </strong> propose un grand nombre de méthode destiné à faciliter 
+		le traitement et la visualisation des données. </br>
+		Voici la liste des méhode destiné au traitement de données </br>
+		
+		<section class = "section1" >
+		
+		<a href = "#add" class = "ancre_methode1"> add </a><br>
+		<a href = "#count" class = "ancre_methode1"> count </a></br>
+		<a href = "#delete" class = "ancre_methode1"> delete </a></br>
+		
+		<a href = "#div" class = "ancre_methode1"> div </a></br>
+		<a href = "#ecart_type" class = "ancre_methode1"> ecart_type </a></br>
+		<a href = "#fill" class = "ancre_methode1"> fill </a></br>
+		<a href = "#general_sort" class = "ancre_methode1"> genral_sort </a></br>
+		<a href = "#max" class = "ancre_methode1"> max </a></br>
+		<a href = "#lower" class = "ancre_methode1"> lower </a></br>
+		
+		</section>
+		
+		<section class = "section2" >
+		<a href = "#mean" class = "ancre_methode1"> mean </a></br>
+		<a href = "#min" class = "ancre_methode1"> min </a></br>
+		<a href = "#mul" class = "ancre_methode1"> mul </a></br>
+		
+		<a href = "#operation" class = "ancre_methode1"> operation </a></br>
+		<a href = "#produce" class = "ancre_methode1"> produce </a></br>
+		<a href = "#remove" class = "ancre_methode1"> remove </a></br>
+		
+		</section>
+		<section class = "section3">
+		<a href = "#sort" class = "ancre_methode1"> sort </a></br>
+		<a href = "#sub" class = "ancre_methode1"> sub </a></br>
+		<a href = "#subtitute" class = "ancre_methode1"> subtitute </a></br>
+		<a href = "#sum" class = "ancre_methode1"> sum </a></br>
+		
+		<a href = "#to_freq" class = "ancre_methode1"> to_freq </a></br>
+		<a href = "#to_percent" class = "ancre_methode1"> to_percent </a></br>
+		<a href = "#upper" class = "ancre_methode1"> upper </a></br>
+		<a href = "#variance" class = "ancre_methode1"> variance </a></br>
+		
+		</section>
+		
+		<h3 class = "debut_definition_des_colonnes"> Voici la manière dont les différentes méthodes sont définies </h3>
+		
+		<li>
+		<h2 id = "add" class = "methode"> add(Colonne,élément à ajouter,type d'ajout) </h2>
+		<h2 id = "add" class = "methode"> add(Colonne,élément à ajouter,type d'ajout,début) </h2>
+		<h2 id = "add" class = "methode"> add(Colonne,élément à ajouter,type d'ajout,début,fin) </h2>
+		
+		</li>
+		
+		<ul>
+			<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+			</li></br>
+			
+			
+			<li> <em> élément à ajouter: </em> Cet élément peut bien être un nombre ou encore un caractère </br>
+			Par exemple: 1.20117695,  % ou encore  le mot "bien"
+			</li></br>
+			
+			<li> <em> type d'ajout : </em> Vous allez indiquer si c'est une chaine de caractère que vous allez ajouter ou si c'est un nombre .</br>
+			Si c'est un nombre mettez à cet endroit le mot clé <em class = "mot_clé"> float</em> et s'il 
+			s'agit d'une chaine de caractère mettez <em class = "mot_clé"> str</em>.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+			</br>
+			
+			</li>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable <br>
+			
+			</li></br>
+			
+			<li> Par exemple <em> add(Tab_S,1.0244,float) </em> veut dire que vous voulez ajouter <em>1.0244</em> à tous les nombres de la colonne <em>Tab_S</em> . Ainsi 
+			si une case de la colonne <em>Tab_S</em> contenait <em>11 </em> au départ, après l'exécution de cette méthode la case contiendrait <em>12.0244  .</em> </br>
+			Par contre <em>add(Tab_S,1.0244,str)</em> ajouterait <em>1.0244</em> à <em>11</em> sous forme de chaine de carctère .Ce qui donnerait <em>111.0244</em>   </li></br>
+			
+			<li> <em class = "nb" > NB: Lorsque vous utiliser <em class = "mot_clé"> float </em> veillez à ce que la colonne ou du moins la portion de la colonne
+			choisie grâce aux variable début et fin ne contiennent que des nombres . Au cas contraire rien ne 
+			passera et vous recevrer un message de notification vous indiquant que la case où se trouve le caractère non numérique  .</em>  </li> </br>
+			
+			<li> Voici un exemple d'utilisation de la méthode <em> add</em></li></br>
+			
+			<li>
+			<p>
+			<figure>
+			<img src = "add/add_None.png" alt = "Image analys"/>
+			
+			<figcaption> Avant l'exécution de la méthode <em> add</em> </figcaption>
+			</figure>
+			</p>
+			</li>
+			
+			<li>
+			<figure>
+			<p>
+			<img src = "add/add_float.png" alt = "Image analys"/>
+			
+			<figcaption> Après l'exécution de la méthode <em> add(Tab_A,5,float).</em> L'algorithme a ajouté <em>5</em> à tous les nombres de la colonne </figcaption>
+			</figure>
+			</p>
+			</li>
+			
+			<li>
+			<figure>
+			<p>
+			<img src = "add/add_str.png" alt = "Image analys"/>
+			
+			<figcaption> Après l'exécution de la méthode <em> add(Tab_A,5,str).</em> L'algorithme a ajouté <em>5</em> aux contenues de toutes les cases de la colonne </figcaption>
+			</figure>
+			</p>
+			</li>
+			
+			
+		
+		</ul>
+	
+		
+		<li>
+		<h2 id = "count" class = "methode"> count([élément à chercher dans la première colonne,élément à chercher dans la seconde colonne,...];[Première colonne où chercher,deuxième colonne où chercher,...]) </h2>
+		
+		</li>
+		<ul>
+			<li> <em> Première accolade : []</em> Cet accolade contient les éléments à chercher dans les colonnes indiqués. </br></br>
+			
+			Par exemple   <em>[Hans,Olivier,14 ans]</em>  veut dire que vous voulez que l'algorithme vous compte les cases 
+			où il y a le nom  <em> Hans </em> dans la première colonne,
+			<em> olivier</em> dans la seconde colonne,et enfin <em> 14 ans </em> dans la dernière colonne indiquée. </br>
+			
+			</li>
+			
+			<li> <em> Deuxième accolade  : []</em> Cet accolade contient les colonnes où il faut chercher. </br></br>
+			Par exemple l'ajout de  <em>[Tab_X,Tab_Y,Tab_D] </em> comme second variable dans l'exemple précendent veut dire que l'algorithme va chercher les cases où il y a <em> Hans </em>
+			dans la colonne <em> Tab_X</em>,<em> Olivier </em> dans la colonne <em> Tab_Y </em> et enfin <em> 14 ans </em> dans la colonne <em> Tab_D </em> .
+			</br></br>
+			</li>
+			
+			
+			<li>
+			L'exemple précendent se resume donc en <em> count([Hans,Olivier,14 ans];[Tab_X,Tab_Y,Tab_D]) </em>	
+			</li>
+			
+			<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "count/count_ligne.png" alt = "Image analys"/>
+			
+			<figcaption> Dans le cas ci-dessous l'exécution de la méthode <em> count([nan,6.0,77];[Tab_A,Tab_B,Tab_C]).</em> donne <em>3</em> comme résultat.</figcaption>
+			</figure>
+			</p>
+			</p>
+			</li>
+		
+		</ul>
+		
+		
+		
+		<li>
+		<h2 id = "delete" class = "methode"> delete(Colonne,début) </h2>
+		<h2 id = "delete" class = "methode"> delete(Colonne,début,fin) </h2>
+		</li>
+		
+		<ul>
+		<li> La méthode <em> delete </em> permet de supprimer une supprimer les contenus d'une colonne </li></br>
+		
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore All </em>
+		</li></br>
+			<li> Le mot clé <em class = "mot_clé"> All </em> indique que la suppression se fera sur toute la ligne </br> </li>
+		</li></br>
+				
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+		</li></br>
+		
+		<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable <br>
+			
+		</li></br>
+		
+		<li> Par exemple <em> delete(All,1) </em> veut dire que vous voulez supprimer les éléments contenus dans la lignes n°1 de toutes les colonnes 
+		de Tab_A à Tab_Z </li></br>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "delete/delete_none.png" alt = "Image analys"/>
+			
+			<figcaption> Voici le tableau avant l'exécution de la méthode <em> delete</em></figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "delete/delete_one_tab.png" alt = "Image analys"/>
+			
+			<figcaption> Voici le tableau après l'exécution de la commande <em> delete(Tab_B,1).</em>Le premier élément de la colonne <em> Tab_B </em>
+			a été retiré.</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "delete/delete_all.png" alt = "Image analys"/>
+			
+			<figcaption> Voici le tableau après l'exécution de la commande <em> delete(All,1).</em>Les premiers éléments de toutes les  colonnes  </em>
+			ont été retirés.</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		
+		
+		</ul>
+	
+		<li>
+		<h2 id = "div" class = "methode"> div(Colonne,diviseur,float) </h2>
+		<h2 id = "div" class = "methode"> div(Colonne,diviseur,float,début) </h2>
+		<h2 id = "div" class = "methode"> div(Colonne,diviseur,float,début,fin) </h2>
+		</li>
+		
+		<ul>
+		
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li><em> float </em> veut dire tout simplement que vous voulez faire une opération arithmétique </li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+		</li></br>
+		
+		<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable <br>
+			
+		</li></br>
+		
+		<li> Par exemple <em> div(Tab_J,14,float) </em> veut dire que voulez diviser tous les nombres se trouvant dans la colonne 
+		<em class = "mot_clé"> Tab_J</em> par  <em class = "mot_clé"> 14</em> </li></br>
+		
+		<li> <em class = "nb" > NB: La méthode  <em>div</em> ne fonctionne que si la colonne indiquée ne contient que des nombres ou du moins  </br> 
+		si les cases contenues entre les variables début et fin ne contiennent que des nombres . Au cas contraire rien ne 
+		passera et vous recevrer un message de notification vous indiquant que la case où se trouve le caractère non numérique </em>  </li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "div/div_none.png" alt = "Image analys"/>
+			
+			<figcaption> Voici le tableau avant l'exécution de la commande <em> div.</em>  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "div/div_one.png" alt = "Image analys"/>
+			
+			<figcaption> Voici le tableau après l'exécution de la commande <em> div(Tab_A,100,float).</em>  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+		Mais on peut voir aussi plus de contrôle sur l'exécution de l'algorithme.Dans l'exemple suivant on ne va diviser que les 10 premières valeurs par 100.
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "div/div_limit_1.png" alt = "Image analys"/>
+			
+			<figcaption> Voici le tableau après l'exécution de la commande <em> div(Tab_A,100,float,1,10).</em>  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "div/div_limit_2.png" alt = "Image analys"/>
+			
+			<figcaption> Les valeurs situées dans les cases au delà de 10 n'ont pas été impacté par la commande <em> div(Tab_A,100,float,1,10).</em>  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+	</ul>
+
+	<li>
+		<h2 id = "general_sort" class = "methode"> general_sort(Colonne,sens,type) </h2>
+		<h2 id = "general_sort" class = "methode"> general_sort(Colonne,sens,type,début) </h2>
+		<h2 id = "general_sort" class = "methode"> general_sort(Colonne,sens,type,début,fin) </h2>
+	</li>
+	<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+			</li></br>
+			
+		<li> <em>sens:</em> Vous devez indiquer si vous voulez ranger les données par ordre croissante ou par ordre décroissante.
+		Si vous soulez les ranger par ordre croissante mettez  <em> mM </em> .Par contre si vous voulez les ranger par ordre décroissante mettez <em> Mm </em>
+		</li></br>
+		
+		<li> <em>type:</em> Vous pouvez mettre soit <em> str</em> soit <em> float </em>.Mettez <em> str</em> quand vous voulez trier une colonne qui contient de chose autre que des nombres et 
+		soit <em> float </em> quand vous voulez trier des nombres. 
+		</li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+		</li></br>
+
+		<li>La méthode <em>general_sort</em> permet de ranger toutes les données du tableau selon les valeurs d'une colonne précise.</br>
+		On peut par exemple ranger les noms de élèves grâce à leurs notes avec <em>general_sort</em>.</li>
+
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "general_sort/general_sort_none.png" alt = "Image analys"/>
+			
+			<figcaption> Voici les données. On va ensuite les ranger en fonction des nombres de la colonne <em>Tab_B</em></figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "general_sort/general_sort_c,mM.png" alt = "Image analys"/>
+			
+			<figcaption> Grâce à la commande <em>general_sort(Tab_C,mM,float)</em> les 
+				chiffres de la colonne <em>Tab_C</em> ont été rangés du plus petit au plus grand. Mais en plus de cela, <em>general_sort</em> range 
+			le contenu des autres colonnes dans le même ordre.</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "general_sort/general_sort_b,mM.png" alt = "Image analys"/>
+			
+			<figcaption>Dans le cas ci ce sont les noms de la colonne <em>Tab_B </em>qui ont été rangés du moins alphabétiquement avancé au plus alphabétiquement avancé. 
+			Ensuite les autres colonnes on été rangées dans le même ordre que les noms de la colonne <em>Tab_B </em>.  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+
+	</ul>
+				
+		</ul>
+			
+		
+		<li>
+		<h2 id = "ecart_type" class = "methode"> ecart_type(Colonne) </h2>
+		<h2 id = "ecart_type" class = "methode"> ecart_type(Colonne,Colonne) </h2>
+		<h2 id = "ecart_type" class = "methode"> ecart_type(Colonne,Colonne,début) </h2>
+		<h2 id = "ecart_type" class = "methode"> ecart_type(Colonne,début,fin) </h2>
+		<h2 id = "ecart_type" class = "methode"> ecart_type(Colonne,Colonne,début,fin) </h2>
+		</li>
+		
+		<ul>
+		
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+		</li></br>
+		
+		<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable
+			
+		</li></br>
+		
+		<li> Comme son nom l'indique, la méthode <em> ecart_type</em> permet de calculer l'écart_type d'une serie de valeur.</br></br>
+		Par exemple <em> ecart_type(Tab_A) </em> vous renvoie l'écart_type des valeurs numériques contenues dans la colonne <em> Tab_A .</em></br></br>
+		
+		Par exemple <em> ecart_type(Tab_A,Tab_G) </em> vous renvoie l'écart_type calculé à partir des valeurs numériques contenues dans la colonne <em> Tab_A </em> 
+		et celle contenues dans la colonne <em> Tab_G .</em></br></br>
+		
+		Par exemple <em> ecart_type(Tab_A,140,800) </em> vous renvoie l'écart_type calculé à partir des valeurs numériques comprises entre de la ligne 140 à la ligne 800 de la colonne <em> Tab_A .</em></br></br>
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "ecart_type/ecart_type_tab_1.png" alt = "Image analys"/>
+			
+			<figcaption>La commande <em> ecart_type(Tab_C)</em> calcule l'écart_type des valeurs situées dans la colonne Tab_C. 
+			Le résultat est ensuite affiché en a bas .  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "ecart_type/ecart_type_tab_1_limits.png" alt = "Image analys"/>
+			
+			<figcaption>Comme pour la méthode <em> div </em> on peut avoir plus de contrôle sur le fonctionnement de la méthode <em> ecart_type </em>
+			.La commande <em> ecart_type(Tab_C,1,5)</em> calcule l'écart_type des valeurs contenues dans les case 1 à 5 de la colonne Tab_C. 
+			Le résultat est ensuite affiché en a bas .  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "ecart_type/ecart_type_tab_2.png" alt = "Image analys"/>
+			
+			<figcaption>La commande <em> ecart_type(Tab_C,Tab_D)</em> calcule l'écart_type des valeurs situées dans les colonne Tab_C et Tab_D en considérant les 
+			données de Tab_C comme des valeurs et ceux de Tab_D comme des effectifs. 
+			Le résultat est ensuite affiché en a bas .  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "ecart_type/ecart_type_tab_2_limits.png" alt = "Image analys"/>
+			
+			<figcaption>C'est le même principe qu'en haut sauf qu'ici on ne prend que les cinq premières valeurs des deux tableaux en compte.  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+
+
+		<li>
+			<h2 id = "fill" class = "methode"> fill(Colonne,calcul à faire,début,fin) </h2>
+		</li>
+
+		<ul>
+			<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+				Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+			</li></br>
+
+			<li> Le calul à faire s'écrit sous forme algébrique. L'inconnu de l'expression est <em>x</em>.La syntaxe
+				de l'ecriture est la même que celle de du langage Python.<br>
+				Par exemple la commande <em>fill(Tab_A,2*x+6*x*x-6,1,12)</em> va remplir les cellules 1 à 12 
+				de la colonne <em>Tab_A</em> tout en mettant dans les cellules le résultat de l'expression <em>2*x+6*x*x-6</em>.
+			</li></br>
+
+
+			<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+				commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+				s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable
+				
+			</li></br>
+
+			<li>
+		
+				<figure>
+					<p>
+					<img src = "fill/fill_none.png" alt = "Image analys"/>
+					
+					<figcaption>Voici le tableau avant l'exécution de la commande <em>fill(Tab_E,9*x*x-6*x+cos(x),1,10) </em>. La colonne <em>Tab_E</em>	
+					est vide.		</figcaption>
+					</figure>
+					</p>
+					</p>
+			</li>
+
+			<li>
+		
+				<figure>
+					<p>
+					<img src = "fill/fill.png" alt = "Image analys"/>
+					
+					<figcaption>Voici le tableau après l'exécution de la commande <em>fill(Tab_E,9*x*x-6*x+cos(x),1,10)</em>. La colonne <em>Tab_E</em>	
+					a été remplie par les images des nombres compris entre <em>1</em> et <em>10</em>.	</figcaption>
+					</figure>
+					</p>
+					</p>
+			</li>
+
+		</ul>
+
+		<li>
+			<h2 id = "lower" class = "methode"> lower(Colonne) </h2>
+			<h2 id = "lower" class = "methode"> lower(Colonne,début,fin) </h2>
+			<h2 id = "lower" class = "methode"> lower(Colonne,début,fin,indice du caractère à modifier) </h2>
+			<h2 id = "lower" class = "methode"> lower(Colonne,début,fin,indices des caractères à modifier) </h2>
+		</li>
+		<ul>
+			<li>La méthode <em>lower</em> permet de mettre la lettre sous forme minuscule.</li>
+
+			<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+				Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+			</li></br>
+
+			<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+				commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+				s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable
+			</li></br>
+
+			<li> <em> indice du caractère à modifier :</em> Ici il s'agit d'avoir un contrôle sur l'exécution de la méthode. Par exemple si vous voulez modifier la première lettre
+				de tous les mots de la colonne, vous devez mettre <em>1 </em>
+			</li></br>
+
+			<li> <em> indices des caractères à modifier :</em> Ici il s'agit d'avoir un contrôle sur l'exécution de la méthode. Par exemple si vous voulez modifier les trois premières lettres
+				de tous les mots de la colonne, vous y mettre <em>1 suivi de 3</em>
+			</li></br>
+
+			<li>Par exemple la commande<em>lower(Tab_A,1,25,1)</em> veut dire q'on veut mettre sous forme minuscule la première 
+			lettre de tous les mots de la colonne Tab_A et cela  sera fait de la cellule 1 à la cellule 25.</li>
+			
+			<li>
+		
+				<figure>
+					<p>
+					<img src = "lower/lower_none.png" alt = "Image analys"/>
+					
+					<figcaption>Voici le tableau avant l'exécution de la commande <em>lower(Tab_A,1,10,1)</em>.Les premières lettres des noms de la colonne
+					sont tous en majiscule.</figcaption>
+					</figure>
+					</p>
+			</li>
+			<li>
+		
+				<figure>
+					<p>
+					<img src = "lower/lower.png" alt = "Image analys"/>
+					
+					<figcaption>Voici le tableau après l'exécution de la commande <em>lower(Tab_A,1,10,1)</em>.Les premières lettres des noms de la colonne
+					sont tous maintenant en miniuscule.</figcaption>
+					</figure>
+					</p>
+			</li>
+
+		</ul>
+
+		
+		<li>
+		<h2 id = "max" class = "methode"> max(Colonne,type) </h2>
+		<h2 id = "max" class = "methode"> max(Colonne,type,début) </h2>
+		<h2 id = "max" class = "methode"> max(Colonne,type,fin) </h2>
+		</li>
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li> <em>type : </em> La variable <em class = "mot_clé"> type </em> permet d'indiquer à l'ordinateur comment vous voulez q'uil effectue la recherche du maximum .</br>
+		En mettant <em> str </em> vous lui indiquez qu'il faut chercher le mot le plus avancé alphabétiquement de la colonne choisie. Par contre en mettant <em> float </em> </br>
+		vous lui indiquer de chercher le nombre le plus élevé de la colonne choisie .</li>
+		
+		<li> <em class = "nb" > NB: Il faut savoir qu'en appliquant <em> str</em> à une colonne contenant des nombres vous ne recevrez pas le maximum mais le nombre qui commence avec le chiffre se rapprochant le plus de 9.
+		Ainsi avec <em> str </em> 90 > 11474 car 90 commence par 9 alors que 11474 commence par 1 .</em></li></br>
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+		</li></br>
+		
+		<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable
+			
+		</li></br>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "max/max_float.png" alt = "Image analys"/>
+			
+			<figcaption>La colonne contient des nombres et le mot clé <em> float </em> indique qu'il faut retourner le nombre le plus élevé de la colonne. 			</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "max/max_str.png" alt = "Image analys"/>
+			
+			<figcaption>La colonne contient des nom et le mot clé <em> str </em> indique qu'il faut retourner le nom le plus alphabétiquement avancé de la colonne. 			</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "max/max_str_for_float.png" alt = "Image analys"/>
+			
+			<figcaption>La colonne contient des nombres et le mot clé <em> str </em> indique qu'il faut retourner le nombre commençant par le chiffre le plus proche de 9 de la colonne. 			</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		
+
+		</ul>
+		
+
+		<li>
+		<h2 id = "mean" class = "methode"> mean(Colonne) </h2>
+		<h2 id = "mean" class = "methode"> mean(Colonne,Colonne) </h2>
+		<h2 id = "mean" class = "methode"> mean(Colonne,Colonne,début) </h2>
+		<h2 id = "mean" class = "methode"> mean(Colonne,début,fin) </h2>
+		<h2 id = "mean" class = "methode"> mean(Colonne,Colonne,début,fin) </h2>
+		</li>
+		<ul>
+		
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+		</li></br>
+		
+		<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable
+			
+		</li></br>
+		
+		<li> Comme son nom l'indique, la méthode <em> mean</em> permet de calculer la moyenne d'une serie de valeur.</br></br>
+		Par exemple <em> mean(Tab_A) </em> vous renvoie la moyenne des valeurs numériques contenues dans la colonne <em> Tab_A .</em></br></br>
+		
+		Par exemple <em> mean(Tab_A,Tab_G) </em> vous renvoie la moyenne calculé à partir des valeurs numériques contenues dans la colonne <em> Tab_A </em> 
+		et celle contenues dans la colonne <em> Tab_G .</em></br></br>
+		
+		Par exemple <em> mean(Tab_A,140,800) </em> vous renvoie la moyenne calculé à partir des valeurs numériques comprises entre de la ligne 140 à la ligne 800 de la colonne <em> Tab_A .</em></br></br>
+		</li>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "mean/mean_1.png" alt = "Image analys"/>
+			
+			<figcaption>La commande <em>mean(Tab_A)</em> calcule la moyenne des nombres de la colonne <em> Tab_A </em> 	et donne la valeur en bas.		</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "mean/mean_2.png" alt = "Image analys"/>
+			
+			<figcaption>La commande <em>mean(Tab_A,Tab_C)</em> calcule la moyenne des nombres de la colonne <em> Tab_A </em> et <em> Tab_C </em>	et donne la valeur en bas.		</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "mean/mean_1_limits.png" alt = "Image analys"/>
+			
+			<figcaption>La commande <em>mean(Tab_A)</em> calcule la moyenne des nombres de la colonne <em> Tab_A </em> 	et donne la valeur en bas sauf 
+			qu'ici il y a plus de contrôle car on ne calcule que la moyenne des nombres situés entre les lignes 1 et 5.		</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "mean/mean_2_limits.png" alt = "Image analys"/>
+			
+			<figcaption>La commande <em>mean(Tab_A,Tab_C)</em> calcule la moyenne des nombres de la colonne <em> Tab_A </em> et <em> Tab_C </em>	et donne la valeur en bas bas sauf 
+			qu'ici il y a plus de contrôle car on ne calcule que la moyenne des nombres situés entre les lignes 1 et 5.	</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		</ul>
+		
+		<li>
+		<h2 id = "min" class = "methode"> min(Colonne,type) </h2>
+		<h2 id = "min" class = "methode"> min(Colonne,type,début) </h2>
+		<h2 id = "min" class = "methode"> min(Colonne,type,fin) </h2>
+		</li>
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li> <em>type : </em> La variable <em class = "mot_clé"> type </em> permet d'indiquer à l'ordinateur comment vous voulez q'uil effectue la recherche du maximum .</br>
+		En mettant <em> str </em> vous lui indiquez qu'il faut chercher le mot le moins avancé alphabétiquement de la colonne choisie. Par contre en mettant <em> float </em> </br>
+		vous lui indiquer de chercher le nombre le moins élevé de la colonne choisie .</li>
+		
+		<li> <em class = "nb" > NB: Il faut savoir qu'en appliquant <em> str</em> à une colonne contenant des nombres vous ne recevrez pas le minimum mais le nombre qui commence avec le chiffre se rapprochant le plus de 0.
+		Ainsi avec <em> str </em> 11474 < 90   car 11474 commence par 1 alors que 90 commence par 9 .</em></li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+		</li></br>
+		
+		<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable
+			
+		</li></br>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "min/min_float.png" alt = "Image analys"/>
+			
+			<figcaption>La colonne contient des nombres et le mot clé <em> float </em> indique qu'il faut retourner le nombre le moins élevé de la colonne. 			</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "min/min_str.png" alt = "Image analys"/>
+			
+			<figcaption>La colonne contient des nom et le mot clé <em> str </em> indique qu'il faut retourner le nom le moins alphabétiquement avancé de la colonne. 			</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+		
+		<figure>
+			<p>
+			<img src = "min/min_str_for_float.png" alt = "Image analys"/>
+			
+			<figcaption>La colonne contient des nombres et le mot clé <em> str </em> indique qu'il faut retourner le nombre commençant par le chiffre le plus proche de 1 de la colonne. 			</figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		</ul>
+		
+		<li>
+		<h2 id = "mul" class = "methode"> mul(Colonne,multiplicateur,type de multiplication) </h2>
+		<h2 id = "mul" class = "methode"> mul(Colonne,multiplicateur,type de multiplication,début) </h2>
+		<h2 id = "mul" class = "methode"> mul(Colonne,multiplicateur,type de multiplication,début,fin) </h2>
+		
+		</li>
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+			</li></br>
+			
+			
+			<li> <em> Multiplicateur: </em> Cet élément est un nombre. Soit un entier comme 12 soit un flottant comme 31.245778 </br>
+			</li></br>
+			
+			<li> <em> type de multiplication : </em> Vous allez indiquer si vous voulez multiplier la sequence de chaine de caractères qui se trouve dans la
+			colonne où si vous voulez multiplier les nombres de la colonne par le multiplicateur.</br>
+			Si vous voulez multiplier les nombres de la colonne par le multiplicateur mettez  <em class = "mot_clé"> float</em> mais si vous voulez multiplier la sequence
+			de chaine de caractères de la colonne mettez 	<em class = "mot_clé"> str</em>.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+			</li></br>
+				
+			<li>
+			Par exemple prenons la colonne <em>Tab_P</em> et tapons la commande <em> mul(Tab_P,12,float) </em>. Cela veut dire qu'on veut multiplier les nombres de la colonne Tab_P par 12 .</br>
+			Ainsi une case de la colonne <em>Tab_P</em> contenant <em>25</em> avant l'execution de la commande contiendra à la fin <em>12*25</em> soit <em>300</em>. Par contre en tapant la commande <em> mul(Tab_P,12,float) </em>
+			on va multiplier par <em>12</em> toutes les séquence de la colonne <em> Tab_P</em>. Ainsi la case contenant <em>25</em> avant l'éxécution de la commande contiendra <em>252525252525252525252525</em> après.
+			Soit <em>12</em> répétitions du chiffre <em>25</em>. 
+			
+			</li>
+			
+			<li>
+			
+			<p>
+			<figure>
+			<p>
+			<img src = "mul/mul_none.png" alt = "Image analys"/>
+			
+			<figcaption>Voici le tableau avant l'exécution de la méthode <em> mul </em>			</figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+			<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "mul/mul_float.png" alt = "Image analys"/>
+			
+			<figcaption>Voici le tableau après l'exécution de la commande <em> mul(Tab_A,100,float) </em>			</figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+			<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "mul/mul_str.png" alt = "Image analys"/>
+			
+			<figcaption>Voici le tableau après l'exécution de la commande <em> mul(Tab_B,2,str) </em>. Les noms contenus dans les cellules de la colonne Tab_B on été multiplié par 2.</figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+			
+			
+		</ul>
+		
+		<li>
+		<h2 id = "operation" class = "methode"> operation(Calcul à faire,début,fin) </h2>
+		</li>
+		
+		<ul>
+		<li>
+		La méthode <em> operation </em> permet de faire des opérations sur les nombres contenus dans les colonnes.
+		</li>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+			</li></br>
+		
+		<li>
+		Par exemple on peut écrire <em> operation(Tab_C[i] = Tab_D[i-1]*Tab_H[i+1]+Tab[i]+25,10,25).</em> </br>
+		Ou encore <em> operation(Tab_B[i+1] = Tab_B[i-1]+Tab_B[i],2,10) </em> qui est l'implémentation de la suite de Fibonacci sur
+		les nombres de la colonne <em> Tab_B </em> entre les cases <em>2</em> et <em>20</em>.
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "operation/operation_none.png" alt = "Image analys"/>
+			
+			<figcaption>Voici le tableau après l'exécution de la commande <em> operation </em>.</figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "operation/operation.png" alt = "Image analys"/>
+			
+			<figcaption>Voici le tableau après l'exécution de la commande <em> operation(Tab_E[i] = Tab_A[i]+Tab_B[i],1,10) </em>. Ici on additionne les nombres des cellules des 
+			colonnes <em> Tab_A</em> et <em> Tab_C</em> et on les met dans les cellules de la colonne <em> Tab_E</em> et ce de la cellule 1 à la cellule 10 .</figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+		</ul>
+		
+		<li>
+		<h2 id = "produce" class = "methode"> produce(Colonne) </h2>
+		<h2 id = "produce" class = "methode"> produce(Colonne,début) </h2>
+		<h2 id = "produce" class = "methode"> produce(Colonne,fin) </h2>
+		</li>
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+			</li></br>
+			
+		<li>
+		La méthode <em> produce  </em> permet de calculer le produit des nombres contenus dans une colonne. Par exemple <em> produce(Tab_R)</em> donnera le produit
+		des nombres contenus dans la colonne Tab_R.
+		</li></br>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "produce/produce.png" alt = "Image analys"/>
+			
+			<figcaption> La commande <em>produce(Tab_C) </em>calcule le produit de toutes les valeurs de la colonne <em> Tab_C </em> et affiche le résultat en bas. </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "produce/produce_limits.png" alt = "Image analys"/>
+			
+			<figcaption> La commande <em>produce(Tab_C,1,2)</em> calcule le produit de toutes les valeurs de la colonne <em> Tab_C </em>comprises entre 1 et 2 et affiche le résultat en bas. </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+		
+		
+			
+			
+		</ul>
+		<li>
+		<h2 id = "remove" class = "methode">remove(Colonne) </h2>
+		</li>
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li>
+		La méhode <em> remove </em> permet de supprimer totalement le contenu d'une colonne de la remplacer par la colonne située à droite.	</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "remove/remove_none.png" alt = "Image analys"/>
+			
+			<figcaption> Voici les données avant l'exéction de la commande <em> remove</em> </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "remove/remove.png" alt = "Image analys"/>
+			
+			<figcaption> Voici les données avant l'exéction de la commande <em> remove(Tab_B) </em>.Cette commande a éffacé toutes les données de 
+			la colonne <em> Tab_B </em>  et a remis les données de la colonne <em> Tab_C </em> à la place  </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+		</ul>
+		
+		<li>
+		<h2 id = "sort" class = "methode"> sort(Colonne,sens,type) </h2>
+		<h2 id = "sort" class = "methode"> sort(Colonne,sens,type,début) </h2>
+		<h2 id = "sort" class = "methode"> sort(Colonne,sens,type,début,fin) </h2>
+		</li>
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+			</li></br>
+			
+		<li> <em>sens:</em> Vous devez indiquer si vous voulez ranger les données par ordre croissante ou par ordre décroissante.
+		Si vous soulez les ranger par ordre croissante mettez  <em> mM </em> .Par contre si vous voulez les ranger par ordre décroissante mettez <em> Mm </em>
+		</li></br>
+		
+		<li> <em>type:</em> Vous pouvez mettre soit <em> str</em> soit <em> float </em>.Mettez <em> str</em> quand vous voulez trier une colonne qui contient de chose autre que des nombres et 
+		soit <em> float </em> quand vous voulez trier des nombres. 
+		</li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+			</li></br>
+			
+		<li> Par exemple <em>sort(Tab_D,mM,float)</em> veut dire que voulez ranger tous les nombres de la colonne <em>Tab_D</em> du plus petit au plus grand. </em></li></br>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sort/sort_none.png" alt = "Image analys"/>
+			
+			<figcaption> Voici la manière dont les données sont rangées dans les différentes colonnnes. </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sort/sort_float_mM.png" alt = "Image analys"/>
+			
+			<figcaption> Grâce à la commande <em> sort(Tab_C,mM,float) </em> on range range les nombres de la colonne Tab_C du minimum au maximum.
+				Le mot clé <em> mM </em> indique en effet qu'on veut ranger les nombres du plus petit au plus grand. </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sort/sort_float_Mm_.png" alt = "Image analys"/>
+			
+			<figcaption> Grâce à la commande <em> sort(Tab_C,Mm,float) </em> on range range les nombres de la colonne Tab_C du  maximum au minimum.
+				Le mot clé <em> Mm </em> indique en effet qu'on veut ranger les nombres du plus grand au plus petit. </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sort/sort_str_mM.png" alt = "Image analys"/>
+			
+			<figcaption> Grâce à la commande <em> sort(Tab_B,mM,str) </em> on range range les noms de la colonne <em> Tab_C </em>du moins alphabétiquement avancé au
+			plus alphabétiquement avancé.Le mot clé <em> Mm </em> indique en effet qu'on veut ranger les noms du moins alphabétiquement avancé au
+			plus alphabétiquement avancé. </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sort/sort_str_Mm_.png" alt = "Image analys"/>
+			
+			<figcaption> Grâce à la commande <em> sort(Tab_B,Mm,str) </em> on range les nombres de la colonne<em> Tab_C </em>du plus alphabétiquement avancé
+			au moins alphabétiquement avancé.Le mot clé <em> Mm </em> indique en effet qu'on veut ranger les nombres du plus alphabétiquement avancé
+			au moins alphabétiquement avancé. </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+		
+			
+			
+		</ul>
+		
+		</ul>
+		
+		<li>
+		<h2 id = "sub" class = "methode"> sub(Colonne,élément à retirer,type) </h2>
+		<h2 id = "sub" class = "methode"> sub(Colonne,élément à retirer,type,début) </h2>
+		<h2 id = "sub" class = "methode"> sub(Colonne,élément à retirer,type,début,fin) </h2>
+		</li>
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+			</li></br>
+		<li> <em>élément à retirer:</em> Cet élément peut être un nombre comme <em>25</em> ou un caractère comme <em> u</em> </li></br>
+		
+		<li> <em>type:</em> Vous pouvez mettre soit <em> str</em> soit <em> float </em>.Mettez <em> str</em> quand vous voulez travailler sur des 
+		chaines de caractères et <em> float </em> si vous voulez travailler sur des nombres. </li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+			</li></br>
+			
+		<li> La méthode <em> sub</em> permet de faire deux choses. Il permet de faire soit la <em>soustraction</em> si on indique <em> float </em> comme type
+		ou de retirer un caractère de toutes les cases en mettant <em> str</em> comme type. </li>
+		<li>
+		Prenons la commande <em> sub(Tab_O,9,float)</em>. Cette comment permet de soustraire 9 à tous les nombres de la colonne <em>Tab_O</em>. Ainsi une case de la 
+		colonne <em>Tab_O</em> contenant le nombre <em>17</em> avant l'exécution de la commande contiendra après le nombre <em>8</em>.Par contre la commande
+		<em> sub(Tab_O,9,str) </em> permet de retirer le chiffre 9 aux contenus de toutes les cases de la colonne <em>Tab_O</em>. Par exemple si une case
+		contenait le <em>uhf47894</em> avant l'exécution de la commande. Après cette execution la case ne contiendrait que <em>uhf4784</em> car la commande a retiré 
+		le <em>9</em> q'il a trouvé dans la case.
+		</li></br>
+		
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sub/sub_none.png" alt = "Image analys"/>
+			
+			<figcaption> Voici les données avant l'exéction de la commande <em> sub</em> </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+		<li>
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sub/sub_float.png" alt = "Image analys"/>
+			
+			<figcaption>L'exéction de la commande <em> sub(Tab_C,25,float)</em> a retiré 25 à tous les  nombres de la colone <em>Tab_C</em> </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+		<li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sub/sub_str_none.png" alt = "Image analys"/>
+			
+			<figcaption> Voici les données avant l'exéction de la commande <em> sub(Tab_B,o,str)</em> </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+			
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sub/sub_float.png" alt = "Image analys"/>
+			<figcaption>L'exéction de la commande <em> sub(Tab_B,o,str)</em> a retiré o à tous les  nnom de la colone <em>Tab_B</em> </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+			</li></br>
+		
+		</ul>
+
+		<li>
+			<h2 id = "subtitute" class = "methode"> subtitute(Colonne,élément à retirer,élément à mettre) </h2>
+			<h2 id = "subtitute" class = "methode"> subtitute(Colonne,élément à retirer,élément à mettre,début) </h2>
+			<h2 id = "subtitute" class = "methode"> subtitute(Colonne,élément à retirer,élément à mettre,début,fin) </h2>
+		</li>
+
+		<ul>
+			<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+				Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+				</li></br>
+
+			<li> <em>élément à retirer:</em> Cet élément peut être un nombre comme <em>25</em> ou lettre comme <em> u</em> .</li></br>
+			
+			<li> <em>élément à mettre:</em> Cet élément peut être un nombre comme <em>25</em> ou lettre comme <em> u</em> .</li></br>
+			
+			<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+				commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+				</br>
+				
+				</li></br>
+				
+				<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+				s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+				</li></br>
+
+				<li>
+		
+					<figure>
+						<p>
+						<img src = "subtitute/subtitute_none.png" alt = "Image analys"/>
+						
+						<figcaption>Ici on remarque que la colonne <em>Tab_B+d</em> contient le mot <em>nan</em> à plusieurs endroits.</figcaption>
+			
+						</figure>
+						</p>
+				</li>
+
+				<li>
+		
+					<figure>
+						<p>
+						<img src = "subtitute/subtitute.png" alt = "Image analys"/>
+						
+						<figcaption>Grâce à l'exécution de la commande <em>subtitute(Tab_D,nan,SUPER,1,10)</em>, les mots <em> nan</em> 
+							ont tous été remplacés par le mot super <em> SUPER</em>.</figcaption>
+						</figure>
+						</p>
+				</li>
+		</ul>
+
+		<li>
+		<h2 id = "sum" class = "methode"> sum(Colonne) </h2>
+		<h2 id = "sum" class = "methode"> sum(Colonne,début) </h2>
+		<h2 id = "sum" class = "methode"> sum(Colonne,fin) </h2>
+		</li>
+
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+			</li></br>
+			
+		<li>
+		La méthode <em> sum </em> permet de calculer la somme des nombres contenus dans une colonne. Par exemple <em> sum(Tab_R) </em> donnera la somme 
+		des nombres contenus dans la colonne <em>Tab_R. </em>	</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sum/sum.png" alt = "Image analys"/>
+			<figcaption>La commande <em> sum(Tab_C)</em> calcule la somme des valeurs de  <em>Tab_C</em>  et les affiche en bas </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+		</li></br>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "sum/sum_limits.png" alt = "Image analys"/>
+			<figcaption>La commande <em> sum(Tab_C,1,5)</em> calcule la somme des valeurs de  <em>Tab_C</em>  et les affiche en bas situées dans les cellules 1 à 5. </figcaption>
+			</figure>
+			</p>
+			</p>
+			
+		</li></br>
+		
+		</ul>
+		<li>
+		<h2 id = "to_freq" class = "methode"> to_freq(Colonne,nombre de chiffres après la virgule) </h2>
+		<h2 id = "to_freq" class = "methode"> to_freq(Colonne,début,nombre de chiffres après la virgule) </h2>
+		<h2 id = "to_freq" class = "methode"> to_freq(Colonne,début,fin,nombre de chiffres après la virgule) </h2>
+		</li>
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+			</li></br>
+
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> nombre de chiffres après la virgule</em> 
+				comme son nom l'indique permet de choisir le  nombre chiffres à mettre après la virgule.
+				</li></br>
+			
+			<li>
+			La méthode <em> to_freq </em> permet de transformer les nombres d'une colonne en fréquences toutes inférieures à 1.Ces fréquences sont calculées à partir de l'ensemble des
+			nombres de la colonne. 
+			</li></br>
+
+			<li>
+				<p>
+				<figure>
+				<p>
+				<img src = "to_freq/to_freq.png" alt = "Image analys"/>
+				
+				<figcaption> Voici le tableau après l'exécution de la commande <em> to_freq(Tab_A,3).</em>  </figcaption>
+				</figure>
+				</p>
+				</p>
+			</li>
+
+			<li>
+				<p>
+				<figure>
+				<p>
+				<img src = "to_freq/to_freq_limits.png" alt = "Image analys"/>
+				
+				<figcaption> Voici le tableau après l'exécution de la commande <em> to_freq(Tab_A,1,5,2) </em> . Ici seul les cinq premières valeurs sont prises en compte </figcaption>
+				</figure>
+				</p>
+				</p>
+			</li>
+		
+		</ul>
+		
+		<li>
+		<h2 id = "to_percent" class = "methode"> to_percent(Colonne,nombre de chiffres après la virgule) </h2>
+		<h2 id = "to_percent" class = "methode"> to_percent(Colonne,début,nombre de chiffres après la virgule) </h2>
+		<h2 id = "to_percent" class = "methode"> to_percent(Colonne,début,fin,nombre de chiffres après la virgule) </h2>
+		</li>
+		
+		<ul>
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable.
+			</br>
+			
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable .
+			</li></br>
+
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> nombre de chiffres après la virgule</em> 
+				comme son nom l'indique permet de choisir le  nombre chiffres à mettre après la virgule.
+				</li></br>
+			
+			<li>
+			La méthode <em> to_percent </em> permet de transformer les nombres d'une colonne en pourcentages tous inférieurs à 100.Ces pourcentages sont calculés à partir de l'ensemble des
+			nombres de la colonne. 
+			</li></br>
+
+			<li>
+				<p>
+				<figure>
+				<p>
+				<img src = "to_percent/to_percent.png" alt = "Image analys"/>
+				
+				<figcaption> Voici le tableau après l'exécution de la commande <em> to_percent(Tab_A,3).</em>  </figcaption>
+				</figure>
+				</p>
+				</p>
+			</li>
+
+			<li>
+				<p>
+				<figure>
+				<p>
+				<img src = "to_percent/to_percent_limits.png" alt = "Image analys"/>
+				
+				<figcaption> Voici le tableau après l'exécution de la commande <em> to_precent(Tab_A,1,5,2) </em> . Ici seul les cinq premières valeurs sont prises en compte </figcaption>
+				</figure>
+				</p>
+				</p>
+			</li>
+		
+		</ul>
+
+		<li>
+			<h2 id = "upper" class = "methode"> upper(Colonne) </h2>
+			<h2 id = "upper" class = "methode"> upper(Colonne,début,fin) </h2>
+			<h2 id = "upper" class = "methode"> upper(Colonne,début,fin,indice du caractère à modifier) </h2>
+			<h2 id = "upper" class = "methode"> upper(Colonne,début,fin,indices des caractères à modifier) </h2>
+		</li>
+		<ul>
+			<li>La méthode <em>upper</em> permet de mettre la lettre sous forme majiscule.</li>
+
+			<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+				Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+			</li></br>
+
+			<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+				commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+			</li></br>
+			
+			<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+				s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable
+			</li></br>
+
+			<li> <em> indice du caractère à modifier :</em> Ici il s'agit d'avoir un contrôle sur l'exécution de la méthode. Par exemple si vous voulez modifier la première lettre
+				de tous les mots de la colonne, vous devez mettre <em>1 </em>
+			</li></br>
+
+			<li> <em> indices des caractères à modifier :</em> Ici il s'agit d'avoir un contrôle sur l'exécution de la méthode. Par exemple si vous voulez modifier les trois premières lettres
+				de tous les mots de la colonne, vous y mettre <em>1 suivi de 3</em>
+			</li></br>
+
+			<li>Par exemple la commande<em>upper(Tab_A,1,25,1)</em> veut dire q'on veut mettre sous forme majiscule la première 
+			lettre de tous les mots de la colonne Tab_A et cela  sera fait de la cellule 1 à la cellule 25.</li>
+			
+			<li>
+		
+				<figure>
+					<p>
+					<img src = "upper/upper_none.png" alt = "Image analys"/>
+					
+					<figcaption>Tous les noms de la colonne <em>Tab_A</em>sont en minuscule.</figcaption>
+					</figure>
+					</p>
+			</li>
+			<li>
+		
+				<figure>
+					<p>
+					<img src = "upper/upper.png" alt = "Image analys"/>
+					
+					<figcaption>Tous les noms de la colonne <em>Tab_A</em>sont en minuscule.Mais grâce à la commande <em>upper(Tab_A,1,10,1) </em>
+					tous les premières lettres de tous les mots de la colonne ont été mis en majuscule.</figcaption>
+					</figure>
+					</p>
+			</li>
+		</ul>
+		
+		<li>
+		<h2 id = "variance" class = "methode"> variance(Colonne) </h2>
+		<h2 id = "variance" class = "methode"> variance(Colonne,Colonne) </h2>
+		<h2 id = "variance" class = "methode"> variance(Colonne,Colonne,début) </h2>
+		<h2 id = "variance" class = "methode"> variance(Colonne,début,fin) </h2>
+		<h2 id = "variance" class = "methode"> variance(Colonne,Colonne,début,fin) </h2>
+		</li>
+		
+		<ul>
+		
+		<li> <em>Colonne:</em> Vous devez indiquer la colonne concernée par la l'opération: </br>
+			Par exemple: <em>Tab_A,Tab_B ou  encore Tab_Z </em>
+		</li></br>
+		
+		<li> <em> début : </em> La variable <em class = "mot_clé"> début</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			commencer l'opération. </br> Vous pouvez lui indiquer de commencer les opérations à partir de la ligne 10 en mettant 10 comme variable <br>
+		</li></br>
+		
+		<li> <em> fin : </em> La variable <em class = "mot_clé"> fin</em> permet d'indiquer à l'algorithme la ligne à partir de laquelle il faut 
+			s'arrêter . </br> Vous pouvez lui indiquer de s'arrêter à partir de la ligne 50 en mettant 50 comme variable
+			
+		</li></br>
+		
+		<li> Comme son nom l'indique, la méthode <em> variance</em> permet de calculer la variance d'une serie de valeur.</br></br>
+		Par exemple <em> variance(Tab_A) </em> vous renvoie la variance des valeurs numériques contenues dans la colonne <em> Tab_A .</em></br></br>
+		
+		Par exemple <em> variance(Tab_A,Tab_G) </em> vous renvoie la variance calculée à partir des valeurs numériques contenues dans la colonne <em> Tab_A </em> 
+		et celle contenues dans la colonne <em> Tab_G .</em></br></br>
+		
+		Par exemple <em> variance(Tab_A,140,800) </em> vous renvoie la calculée à partir des valeurs numériques comprises entre de la ligne 140 à la ligne 800 de la colonne <em> Tab_A .</em></br></br>
+		</li>
+
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "variance/variance_1.png" alt = "Image analys"/>
+			
+			<figcaption>La commande <em> variance(Tab_A)</em> calcule la variance des valeurs situées dans la colonne Tab_A. 
+			Le résultat est ensuite affiché en a bas .  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "variance/variance_1_limits.png" alt = "Image analys"/>
+			
+			<figcaption>Comme pour la méthode <em> div </em> on peut avoir plus de contrôle sur le fonctionnement de la méthode <em> ecart_type </em>
+			.La commande <em> variance(Tab_A,1,5)</em> calcule la variance des valeurs contenues dans les case 1 à 5 de la colonne Tab_C. 
+			Le résultat est ensuite affiché en a bas .  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "variance/variance_2.png" alt = "Image analys"/>
+			
+			<figcaption>La commande <em> ecart_type(Tab_A,Tab_B)</em> calcule l'écart_type des valeurs situées dans les colonne Tab_C et Tab_D en considérant les 
+			données de Tab_A comme les valeurs et ceux de Tab_B comme des effectifs. 
+			Le résultat est ensuite affiché en a bas .  </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		<li>
+			<p>
+			<figure>
+			<p>
+			<img src = "variance/variance_2_limits.png" alt = "Image analys"/>
+			
+			<figcaption>C'est le même principe qu'en haut sauf qu'ici on ne prend en
+				 compte que les 5 primières valeurs des deux colonnes </figcaption>
+			</figure>
+			</p>
+			</p>
+		</li>
+		
+		
+		</ul>
+		
+		
+		
+		</body>
+		
+	</html>
+	
+		
+		
+	
