@@ -1,0 +1,113 @@
+
+.analys
+{
+	font-size: 1.2em;
+	color: blue;
+}
+
+.nb
+{
+	font-size: 1.0em;
+	font-family : Consolas;
+	font-weight: bold;
+	color : blue;
+	background-color: yellow;
+}
+.image_bloc_add_1
+{
+	right:98%;
+}
+.image_bloc_add_2
+{
+	right:50%;
+}
+.section1
+{
+	font-weight: bold;
+	background-color: rgb(77,194,251)
+}
+.nom_methode
+{
+	font-size: 1.0em;
+	font-family : Consolas;
+	font-weight: bold;
+	color : blue;
+	background-color: yellow;
+	
+}
+.section2
+{
+	font-weight: bold;
+	position : relative;
+	right : -550px;
+	bottom : 190px;
+	background-color: rgb(77,194,251);
+	
+}
+.section3
+{
+	font-weight: bold;
+	position : relative;
+	right : -1100px;
+	bottom : 375px;
+	background-color: rgb(77,194,251)
+	
+}
+.ancre_methode1
+{
+	font-family:"Courier New";
+	font-style: bold;
+	font-size: 1.5em;
+	color: rgb(255, 255,0);
+	text-decoration: underline;
+}
+.ancre_methode2
+{
+	font-family: Constantia,"Book Antiqua","Bookman Old Style","Courier New";
+	font-style: italic;
+	font-size: 1.5em;
+	color: rgb(7,137,23);
+	
+}
+.methode
+{
+	font-family: "Bookman Old Style","Courier New",Constantia, "Book Antiqua";
+	font-size: normal;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-decoration: underline;
+	text-decoration: underline;
+}
+p
+{
+	font-size: 1.1em;
+}
+li
+{
+	font-size: 1.1em;
+}
+em
+{
+	font-size : 1.2em;
+	color: red;
+	font-weight: bold
+	font-style: italic;
+	font-family: Consolas;
+}
+
+.debut_definition_des_colonnes
+{
+	text-align: center;
+	text-decoration: underline;
+	color: red;
+	font-family:"Courier New";
+	
+}
+
+.mot_clé
+{
+	font-size: 1.0em;
+	font-family : Consolas;
+	font-weight: bold;
+	color : dark-red;
+}

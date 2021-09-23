@@ -1,0 +1,23 @@
+p
+{
+	color : black;
+	font-size: 1em;
+	font-family: Consolas;
+}
+
+em
+{
+	color : yellow;
+}
+.salutations
+{
+	color: blue;
+	font-family: "Arial Black"
+}
+.def
+{
+	font-size: 2em;
+	font-family: Arial;
+	color: red;
+}
+	

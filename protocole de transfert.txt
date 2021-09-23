@@ -1,0 +1,28 @@
+Voici la manière dont les info receiver enverrons les donné aux printer
+Plot:
+     [faire un nouveau widget ou faire dans un ancien ( 1 pour l'ancien et 2 pour le nouveau),[Colonnes choisies (1,ou 2)],[titre,label des données,label en x , label en y],[couleur,marker,style des lignes,taille des lignes],[limites]]
+
+bar :
+[faire un nouveau widget ou faire dans un ancien ( 1 pour l'ancien et 2 pour le nouveau),[Colonnes choisies (1,ou 2)],[titre,label des données,label en x , label en y],[couleur,orientation,bar_width],[limites]]
+
+scatter :
+[faire un nouveau widget ou faire dans un ancien ( 1 pour l'ancien et 2 pour le nouveau),[Colonnes choisies (1,ou 2)],[titre,label des données,label en x , label en y],[couleur,marker,bar_width],[limites]]
+
+stackplot :
+[faire un nouveau widget ou faire dans un ancien ( 1 pour l'ancien et 2 pour le nouveau),[Colonnes choisies (de 1 à 26)],[labels,couleur,limits],[titre,label en x , label en y]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+pour les plots helpers :
+
+[1ou 2 u pour  pas de grille et deux pour grille ,[grid_line_style,grid_line_width,grid_color],[right,left,top,bottom],[x,y,x_color,y_color]]

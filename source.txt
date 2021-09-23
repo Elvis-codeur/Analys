@@ -1,0 +1,2 @@
+for i in range(0,10):
+    self.general_list[1][i]= self.general_list[1][i]*2
